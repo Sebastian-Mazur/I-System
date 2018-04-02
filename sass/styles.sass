@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700')
+@font-face 
+    font-family: "Lovelo";
+    src: url("../fonts/lovelo_black-webfont.woff") format("woff")
+    src: url("../fonts/lovelo_black-webfont.eot") format("eot")
+    src: url("../fonts/lovelo_black-webfont.svg") format("svg")
+    src: url("../fonts/lovelo_black-webfont.ttf") format("truetype")
+
+* 
+    box-sizing: border-box
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+$smallSize: 576px
+$mediumSize: 768px
+$largeSize: 992px
+$xlargeSize: 1140px
+$buttonOrangeColorLight: #fc9a57
+$buttonOrangeColorDark: #fc6a02
+$buttonWhiteColorLight: #FBFBFB
+$buttonWhiteColorDark: #f0f0f0
+$greyColor: #eaeaeb
+$greyColorPlaceholder: #bfbfbf
+$navTextColor: #000000
+$sloganColor: #b3b5b6
+$contentHeaderColor: #a0a1a3
+$gerColorFooter: #a8a8a8
+
+body
+    background-color: fcfcfc
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px
+    @media (max-width: $largeSize)
+        max-width: 970px
+    @media (max-width: $mediumSize)
+        max-width: 750px
+
+.text-styles-lato
+    font-family: "Lato", sans-serif
+    font-size: 13px
+    font-weight: 400
+
+.text-style-lovelo
+    font-family: "Lovelo"
+    font-weight: 900
+    font-size: 11px
+
+.btn
+    @extend .text-style-lovelo
+    cursor: pointer
+    border-radius: 15px
+    border: 0
+    outline: none 
+    &-navigator        
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.29)
+        width: 105px
+        height: 32px
+        background-color: #ff6600
+        color: #ffffff
+        background: linear-gradient($buttonOrangeColorLight, $buttonOrangeColorDark)
+        &:hover
+            background: $buttonOrangeColorLight
+    &-hero
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.29)
+        width: 175px
+        height: 32px
+        background: linear-gradient($buttonWhiteColorLight, $buttonWhiteColorDark)
+        &:hover
+            background: $buttonWhiteColorLight
+        &:focus
+            background: $buttonWhiteColorDark
+    &-contact
+        @extend .btn-navigator
+
+.navigator
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    margin-top: 30px
+    &__logo
+        background-image: url("../assets/logo.png")
+        width: 236px
+        height: 46px
+        @media screen and (max-width: $largeSize)
+            margin-bottom: 30px
+    &__input   
+        @extend .text-styles-lato     
+        background-image: url("../assets/search.png")
+        background-position: 90% 50% 
+        background-repeat: no-repeat
+        border-radius: 20px
+        border: 2px $greyColor solid
+        width: 219px
+        height: 12px
+        padding: 15px   
+        outline: none     
+        &::-webkit-input-placeholder
+            color: $greyColorPlaceholder
+        &:-moz-placeholder
+            color: $greyColorPlaceholder
+        &::-moz-placeholder
+            color: $greyColorPlaceholder
+        &:-ms-input-placeholder
+            color: $greyColorPlaceholder
+        &:focus
+            border: 2px $buttonOrangeColorLight solid
+        @media screen and (max-width: $mediumSize)
+            flex: 90%
+    &__user-panel
+        display: flex
+        justify-content: space-between
+        flex-direction: row 
+        align-items: center
+        @media screen and (max-width: $largeSize)
+            flex-direction: column
+    &__user-container
+        display: flex
+        flex-direction: row
+        align-items: center
+        @media screen and (max-width: $smallSize)
+            flex-wrap: wrap      
+    &__user
+        margin-left: 30px
+        @media screen and (max-width: $mediumSize)
+            flex: 35%
+        @media screen and (max-width: $smallSize)
+            margin-top: 20px
+    &__icon
+        font-size: 13px
+    &__cart
+        margin-left: 30px
+        @media screen and (max-width: $mediumSize)
+            flex: 35%
+        @media screen and (max-width: $smallSize)
+            margin-top: 20px
+    &__user-cart
+        @extend .text-styles-lato
+    &__link-btn
+        text-decoration: none
+        margin-left: 30px
+        @media screen and (max-width: $mediumSize)
+            flex: 90%
+        @media screen and (max-width: $smallSize)
+            text-align: center
+            margin-left: auto
+            margin-top: 20px
+    &__account
+        text-decoration: none
+        color: $navTextColor
+        @extend .text-styles-lato
+        &:hover
+            color: $buttonOrangeColorLight
+    &__slogan
+        font-family: Lato
+        color: $sloganColor
+        font-size: 11px
+        font-weight: 400
+        text-align: left
+        overflow: hidden
+        margin-left: 25px
+        margin-top: 18px
+        text-transform: uppercase
+        &:after
+            background-color: $sloganColor
+            content: ""
+            display: inline-block
+            height: 1px
+            position: relative
+            vertical-align: middle
+            width: 100%
+            left: 0.5em
+            margin-right: -50%
+            @media screen and (max-width: $mediumSize)
+                width: 80%
+        @media screen and (max-width: $mediumSize)
+            margin-left: 0
+
+.menu
+    margin-top: 25px
+    &__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        @media screen and (max-width: $smallSize)
+            flex-wrap: wrap
+    &__item
+        margin-right: 35px
+        display: flex
+        align-items: center
+        @media screen and (max-width: $smallSize)
+            flex: 30%
+        &__icon
+            font-size: 15px
+            padding-left: 5px
+            padding-right: 5px
+            position: relative
+            top: -2px  
+        &:hover
+            .menu
+                &__item                    
+                    &__icon
+                        transform: rotate(180deg)
+                        top: auto
+                        bottom: -3px 
+                        color: $buttonOrangeColorLight 
+                &__link
+                    color: $buttonOrangeColorLight               
+    &__link
+        text-decoration: none
+        color: $navTextColor
+        text-transform: uppercase
+        @extend .text-style-lovelo
+        font-size: 15px        
+
+.hero
+    background: #dedcd2
+    height: 549px
+    padding: 45px
+    overflow: hidden
+    position: relative
+    margin-top: 20px
+    @media screen and (max-width: $xlargeSize)
+        padding: 20px
+        height: 500px
+    @media screen and (max-width: $smallSize)
+        height: 900px
+    &__photo
+        position: absolute
+        right: 20%
+        top: 3%
+        @media screen and (max-width: $xlargeSize)
+            right: 10%
+        @media screen and (max-width: $largeSize)
+            right: -15%
+        @media screen and (max-width: $smallSize)
+            top: 50%
+    &__container
+        border: 6px solid #ffffff
+        height: 460px
+        width: 1581px
+        margin-left: 280px
+        padding-left: 90px
+        @media screen and (max-width: $xlargeSize)
+            margin-left: auto
+            padding-left: 30px
+        @media screen and (max-width: $largeSize)
+            margin-left: 30px
+        @media screen and (max-width: $smallSize)
+            margin-left: 0
+            padding-left: 10px
+    &__title
+        font-family: "Lovelo"
+        color:  #ffffff
+        font-size: 50.83px
+        font-weight: 900  
+        line-height: 90%       
+        width: 420px
+        padding-top: 100px
+        @media screen and (max-width: $smallSize)
+            width: 20%
+            padding-top: 70px       
+    &__text
+        font-family: 'Lato'
+        color: #7e7d78        
+        font-size: 13.95px
+        font-weight: 400   
+        width: 550px
+        padding-top: 28px
+        padding-bottom: 57px
+        @media screen and (max-width: $xlargeSize)
+            width: 400px
+        @media screen and (max-width: $smallSize)
+            width: 20%
+
+.last-watched
+    border-bottom: 1px solid $greyColor
+    border-top: 1px solid $greyColor
+    @media screen and (max-width: $largeSize)
+        border: 0
+    &__container
+        display: flex    
+        flex-direction: row
+        align-items: center
+        @media screen and (max-width: $largeSize)
+            flex-direction: column                      
+    &__title
+        @extend .text-style-lovelo
+        font-size: 13.95px
+        text-transform: uppercase
+        padding: 30px
+        border-right: 1px solid $greyColor
+        height: 100px
+        line-height: 40px
+        @media screen and (max-width: $xlargeSize)
+            padding: 10px
+            line-height: 85px
+        @media screen and (max-width: $largeSize)
+            line-height: 85px
+            border-right: 0
+    &__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        list-style-position: inside
+        cursor: pointer
+        @media screen and (max-width: $largeSize)
+            flex-wrap: wrap
+    &__item        
+        border-right: 1px solid $greyColor 
+        width: 100px
+        height: 100px
+        @media screen and (max-width: $largeSize)
+            flex: 25%
+            display: flex
+            justify-content: center
+            border: 1px solid $greyColor
+            width: auto
+    &__image
+        width: 100%
+        height: auto        
+        padding: 20px 30px 20px 30px
+
+.content
+    padding: 0
+    &__menu
+        border-top: 1px solid $contentHeaderColor
+        text-align: center
+        margin-top: 25px
+        &__list
+            display: flex
+            flex-direction: row
+        &__item 
+            padding: 25px
+            cursor: pointer
+            @media screen and (max-width: $smallSize)
+                padding: 5px
+            &:hover
+                color: $navTextColor
+                .content
+                    &__menu
+                        &__icon
+                            color: $navTextColor
+                        &__link
+                            color: $navTextColor
+        &__link
+            @extend .text-style-lovelo
+            font-size: 17.93px
+            text-decoration: none
+            text-transform: uppercase
+            color: $contentHeaderColor            
+        &__icon
+            font-size: 15px
+            padding-left: 5px
+            padding-right: 5px
+            position: relative
+            top: -3px 
+            color: $contentHeaderColor
+    &__store  
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center      
+        &__list
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap                        
+        &__item
+            flex: 25%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center 
+            position: relative
+            &:hover                
+                .content
+                    &__store
+                        &__btn
+                            display: block
+                        &__img
+                            filter: blur(4px)
+        &__btn
+            display: none 
+            position: absolute
+            top: 150px
+            left: 95px  
+            @media screen and (max-width: $largeSize)
+                left: 42px     
+        &__img
+            width: 100%
+            height: auto            
+            padding-top: 20px
+            padding-bottom: 20px
+            border-bottom: 1px $greyColor solid
+        &__price
+            @extend .text-style-lovelo
+            font-size: 16px
+            color: $navTextColor
+            padding-top: 10px
+            text-align: left            
+        &__info
+            @extend .text-styles-lato
+            font-size: 14px
+            color: $gerColorFooter 
+            padding-top: 4px
+            text-align: left 
+        &__link
+            margin: 65px
+
+.footer
+    border: 2px solid $greyColor
+    display: flex
+    flex-direction: row
+    padding: 30px
+    @media screen and (max-width: $largeSize)
+        flex-wrap: wrap
+    &__info
+        flex: 26%        
+        &__title
+            text-transform: uppercase
+            @extend .text-style-lovelo
+            font-size: 14px
+        &__list
+        &__item
+            padding-top: 25px
+            &:first-child
+                padding-top: 0
+        &__link
+            @extend .text-styles-lato
+            text-decoration: none
+            color: $navTextColor
+            font-weight: 700
+            &:hover
+                color: $buttonOrangeColorDark
+    &__pay-info
+        flex: 37%
+        @media screen and (max-width: $smallSize)
+            margin-top: 40px
+        &__title
+            text-transform: uppercase
+            @extend .text-style-lovelo
+            font-size: 14px
+        &__text
+            @extend .text-styles-lato
+            color: $gerColorFooter
+            padding-top: 30px
+            width: 366px
+            &--orange
+                color: $buttonOrangeColorDark
+                font-weight: 700
+            @media screen and (max-width: $smallSize)
+                width: 230px
+    &__contact
+        flex: 30%
+        @media screen and (max-width: $largeSize)
+            padding-top: 30px
+            text-align: center
+        &__title
+            text-transform: uppercase
+            @extend .text-style-lovelo
+            font-size: 14px
+        &__form
+            padding-top: 30px
+            display: flex
+            @media screen and (max-width: $largeSize)
+                justify-content: center
+            @media screen and (max-width: $smallSize)
+                flex-direction: column
+        &__input
+            @extend .text-styles-lato     
+            border-radius: 20px
+            border: 1.5px $greyColor solid
+            width: 241px
+            height: 12px
+            padding: 15px   
+            outline: none 
+            margin-right: 15px    
+            &::-webkit-input-placeholder
+                color: $greyColorPlaceholder
+            &:-moz-placeholder
+                color: $greyColorPlaceholder
+            &::-moz-placeholder
+                color: $greyColorPlaceholder
+            &:-ms-input-placeholder
+                color: $greyColorPlaceholder
+            &:focus
+                border: 1.5px $buttonOrangeColorLight solid
+            @media screen and (max-width: $smallSize)
+                margin-bottom: 15px
+                width: 100%
+                margin-right: 0
+        &__info
+            text-transform: uppercase
+            @extend .text-style-lovelo
+            font-size: 14px
+            padding-top: 40px
+        &__phone
+            font-family: 'Lato', sans-serif
+            color: $gerColorFooter
+            font-size: 30px
+            font-weight: 700
+            padding-top: 20px
+        &__email
+            font-family: 'Lato', sans-serif
+            color: $navTextColor
+            font-size: 14px
+            font-weight: 700
+            padding-top: 20px
+
+.author
+    padding: 30px
+    &__paragraph
+        font-family: Lato
+        color: $gerColorFooter
+        font-size: 12px
+        font-weight: 400

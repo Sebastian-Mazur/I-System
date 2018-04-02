@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>goodlookin</title>
+</head>
+<body> 
+    <nav class="navigator container">
+        <div class="navigator__user-panel">
+            <div class="navigator__logo">                
+            </div>
+            <div class="navigator__user-container">
+                <input type="text" placeholder="Szukaj produktu..." class="navigator__input">
+                <div class="navigator__user">
+                    <i class="fas fa-user navigator__icon"></i>
+                    <a href="#" class="navigator__account">Twoje konto</a>
+                </div>
+                <div class="navigator__cart">
+                    <i class="fas fa-shopping-cart navigator__icon"></i>
+                    <span id="js-user-cart" class="navigator__user-cart"></span>
+                </div>                
+                <a href="#" class="navigator__link-btn">
+                    <button class="btn btn-navigator">Do kasy</button>
+                </a>
+            </div>
+        </div>
+        <span class="navigator__slogan">that's what we called fashion</span>
+        <div class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">odzież<i class="fas fa-sort-down menu__item__icon"></i></a>                    
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">akcesoria<i class="fas fa-sort-down menu__item__icon"></i></a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">trendy</a>
+                    <i class="fas fa-sort-down menu__item__icon"></i>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">marki<i class="fas fa-sort-down menu__item__icon"></i></a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">nowości</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">promocje</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <header class="hero">            
+            <div class="hero__container">
+                <h1 class="hero__title">nowa kolekcja jesień 2015</h1>
+                <p class="hero__text">Niebanalna kurtka wiosenna! Kurtka bardzo dobrze skrojona. Zapinana na napy. Wykonana z świetnej jakości materiału. Kurtka jest pikowana.</p>
+                <a href="#">
+                    <button class="btn btn-hero">Dowiedz się więcej</button>
+                </a>
+                <img src="assets/Layer 160.png" alt="model" class="hero__photo">                
+            </div>
+        </header>
+        <section class="last-watched">
+            <div class="container last-watched__container">
+                <h3 class="last-watched__title">ostatnio oglądane:</h3>
+                <ul class="last-watched__list" id="js-last-watched__list"></ul>
+            </div>            
+        </section>
+        <section class="content container">
+            <fieldset class="content__menu">
+                <legend>
+                    <ul class="content__menu__list">
+                        <li class="content__menu__item">
+                            <a href="#" class="content__menu__link">Polecane</a>
+                            <i class="fas fa-sort-down content__menu__icon"></i>
+                        </li>
+                        <li class="content__menu__item">
+                            <a href="#" class="content__menu__link">Nowości</a>
+                        </li>
+                        <li class="content__menu__item">
+                            <a href="#" class="content__menu__link">Promocje</a>
+                        </li>
+                    </ul>
+                </legend>                
+            </fieldset>
+            <div class="content__store">
+                <ul id="js-content__store__list" class="content__store__list">
+
+                </ul>                
+                <button class="btn btn-hero content__store__link">zobacz więcej produktów</button>                
+            </div>
+        </section>
+    </main>
+    <footer class="container footer">
+        <div class="footer__info">
+            <ul class="footer__info__list">
+                <li class="footer__info__item">
+                    <h3 class="footer__info__title">Informacje</h3>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Status zamówienia</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Zwroty, wymiana, reklamacje</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link" class="footer__info__link">Regulamin sklepu</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Formy płatności</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Koszty dostawy</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">O firmie</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Program lojalonościowy</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Kontakt</a>
+                </li>
+                <li class="footer__info__item">
+                    <a href="#" class="footer__info__link">Polityka cookies sklepu</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__pay-info">
+            <h3 class="footer__pay-info__title">płatnośc i dostawa</h3>
+            <p class="footer__pay-info__text">
+                Akceptowalne formy płatności to karta płatnicza, przelew online, przelew tradycyjny, płatnośc przy odbiorze.
+            </p>
+            <p class="footer__pay-info__text">
+                Metody dostawy:<br>Przesyłka kurierska lub odbiór osobisty w sklepie.
+            </p>
+            <p class="footer__pay-info__text">
+                Koszty dostawy:<br>wpłata na konto: 14;90<br>opłata za pobraniem<br>przy zamówieniu powyżej 200 zł wysyłka gratis!<br>Powyższe ceny dotyczą wysyłki na terenie Polski.
+            </p>
+            <p class="footer__pay-info__text footer__pay-info__text--orange">
+                30 dni na odstąpienie od umowy!
+            </p>
+        </div>
+        <div class="footer__contact">
+            <h3 class="footer__contact__title">newsletter</h3>
+            <form class="footer__contact__form">
+                <input type="text" class="footer__contact__input" placeholder="Wpisz swój adres email...">
+                <a href="#" class="footer__contact__link-btn">
+                    <button class="btn btn-contact">Zapisz się</button>
+                </a>
+            </form>
+            <h4 class="footer__contact__info">kontakt</h4>
+            <h4 class="footer__contact__phone">517 577 517</h4>
+            <h4 class="footer__contact__email">sklep@goodlookin.pl</h4>
+        </div>
+    </footer>
+    <div class="author container">
+        <p class="author__paragraph">Wszelkie prawa zastrzeżone przez &copy; goodlookin</p>
+        <p class="author__paragraph">Powered by i-system</p>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
